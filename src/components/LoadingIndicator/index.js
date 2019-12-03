@@ -1,11 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { usePromiseTracker } from 'react-promise-tracker';
 import Loader from 'react-loader-spinner';
 
 import { Container } from './styles';
 
-function LoadingIndicator() {
+export default function LoadingIndicator() {
   const { promiseInProgress } = usePromiseTracker();
 
   return (
@@ -16,5 +15,3 @@ function LoadingIndicator() {
     )
   );
 }
-
-export default connect()(LoadingIndicator);
